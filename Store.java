@@ -34,6 +34,19 @@ public class Store {
         }
 
     }
+     public Book searchBook(String title){
+
+        for (int i = 0; i < media.size(); i++) {
+            if (media.get(i)instanceof Book && media.get(i).getTitle()==title) {
+
+                    return (Book)media.get(i);
+
+            }
+
+        }
+
+        return null;
+    }
 
     @Override
     public String toString() {
